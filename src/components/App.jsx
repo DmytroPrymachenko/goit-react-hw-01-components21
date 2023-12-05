@@ -11,15 +11,17 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
+         height: '100vh',
         display: 'flex',
         justifyContent: 'center',
+        flexDirection: 'column',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 20,
         color: '#010101'
+        
       }}
     >
-      React homework template
+     
       <Profile
   username={user.username}
   tag={user.tag}
@@ -28,10 +30,10 @@ export const App = () => {
   stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      <Statistics stats={data} />
+     
  
       <FriendList friends={friends} />;
-      <TransactionHistory items={transactions} />;
+     <TransactionHistory items={transactions} />;  
     </div>
   );
 };

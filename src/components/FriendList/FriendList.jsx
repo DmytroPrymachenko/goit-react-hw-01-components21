@@ -1,15 +1,17 @@
+import { FriendListItem, FriendItem, StatusColor } from './FriendList.styled';
+
 export const FriendList = ({ friends }) => {
     return (
       
         <section className="FriendList">
-      <ul className="friend-list">
+      <FriendListItem>
         {friends.map(({ avatar, name, isOnline, id }) => (
-          <li key={id} className="item">
-            <span className="status">{isOnline}</span>
+          <FriendItem key={id} >
+            <StatusColor isOnline={isOnline} aria-live="polite" />
             <img className="avatar" src={avatar} alt="User avatar" width="48" />
             <p className="name">{name}</p>
-          </li>
+          </FriendItem>
         ))}
-      </ul>
+      </FriendListItem>
     </section>
     )}
